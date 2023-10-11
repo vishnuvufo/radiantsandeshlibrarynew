@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="@drawable/elevation_bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/deliveryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/ripple_effect"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgMenuDelivery"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center"
+            android:tint="@color/white"
+            android:src="@drawable/ic_menu" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tvPointName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Customer Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvRequestAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="Req Amt"
+                    android:textStyle="bold"
+                    android:textColor="#f3cf25" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tvClientName"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Client Name"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvClientCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="client code" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tvPointAddress"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textStyle="bold"
+                    android:textColor="#f3cf25" />
+
+                <TextView
+                    android:id="@+id/tvDepType"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textSize="12sp"
+                    android:text="Dep type"
+                    android:textColor="#f3cf25" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgArrowDelivery"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end|center"
+            android:src="@drawable/ic_arrow"
+            android:tint="@color/submit_btn__normal_bg" />
+
+    </LinearLayout>
+</LinearLayout>

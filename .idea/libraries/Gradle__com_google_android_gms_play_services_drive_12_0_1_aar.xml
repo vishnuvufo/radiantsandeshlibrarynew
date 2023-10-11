@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-drive:12.0.1@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/6fed38a7edd7d2dca6eec71773e469de/transformed/jetified-play-services-drive-12.0.1/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/6fed38a7edd7d2dca6eec71773e469de/transformed/jetified-play-services-drive-12.0.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

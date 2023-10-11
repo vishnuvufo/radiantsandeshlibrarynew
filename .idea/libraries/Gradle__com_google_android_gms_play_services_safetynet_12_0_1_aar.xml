@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.gms:play-services-safetynet:12.0.1@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/1c374368d4b64d6738007c61492be2c0/transformed/jetified-play-services-safetynet-12.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/1c374368d4b64d6738007c61492be2c0/transformed/jetified-play-services-safetynet-12.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

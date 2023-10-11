@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff61abe4"
+        >
+
+        <TextView
+            style="@style/list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/print_btn_img"
+            android:text="@string/receipt_print"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/printerType"
+            style="@style/list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/connectPrinter"
+            android:src="@drawable/edit_rec_normal"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/printer_type" />
+
+        <ImageView
+            android:id="@+id/connectPrinter"
+            style="@style/list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/printer_status"
+            android:src="@drawable/printer_off"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/trans_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:padding="10dp"
+        android:scrollbars="none"
+        tools:listitem="@layout/translist_item" >
+    </ListView>
+
+</LinearLayout>

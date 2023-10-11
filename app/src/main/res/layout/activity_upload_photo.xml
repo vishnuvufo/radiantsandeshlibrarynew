@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadPhoto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ln_deposit_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/postDetailsTopLayout"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorblueone"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:id="@+id/back"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingRight="20dp"
+                android:drawableRight="@drawable/uploadimage"
+                android:text="Upload Image"
+                android:fontFamily="sans-serif" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_slipupload"
+         android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fr_slipupload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_slip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/photoo"
+                android:scaleType="fitXY" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_eye"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/montserratbold"
+            android:gravity="end"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/ln_submit"
+        android:background="@drawable/border_blue"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="UselessParent">
+        <TextView
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/text_submit"
+            android:textAllCaps="false"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

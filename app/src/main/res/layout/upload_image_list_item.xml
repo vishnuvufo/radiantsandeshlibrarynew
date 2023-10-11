@@ -1,0 +1,129 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/framelayout"
+    style="@style/Theme.MaterialComponents.Light"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:checkable="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="#00F3F3F6"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:layout_margin="3dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_gravity="end|right"
+                        android:layout_weight="1.4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:fontFamily="@font/montserratbold"
+                            android:layout_gravity="center"
+                            android:gravity="right|end"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pending"
+                            android:textColor="#E60707"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_margin="1dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="0.6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:gravity="start|left"
+                            android:id="@+id/tv_customername"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:fontFamily="@font/montserratregular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Transcation Name"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorblueone"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_margin="3dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="1.4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:gravity="start|left"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:fontFamily="@font/montserratregular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" Trans ID :"
+                            android:textColor="#000000"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_gravity="end|right"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/tv_transID"
+                            android:fontFamily="@font/montserratbold"
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" 0>"
+                            android:textColor="#000000"
+                            android:textAppearance="?attr/textAppearanceListItem"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-messaging:12.0.1@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/b6ff3de20791a11820d72db70565afdf/transformed/jetified-firebase-messaging-12.0.1/res" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/b6ff3de20791a11820d72db70565afdf/transformed/jetified-firebase-messaging-12.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/b6ff3de20791a11820d72db70565afdf/transformed/jetified-firebase-messaging-12.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

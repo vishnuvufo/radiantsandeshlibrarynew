@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "567438357278",
+    "project_id": "radiantsandesh",
+    "storage_bucket": "radiantsandesh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567438357278:android:53e813db440dd55f3b4f0f",
+        "android_client_info": {
+          "package_name": "com.mountfox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567438357278-48n5ehbff00tuc20ov5femcrptk6nj8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_BrubRZRdwiHyibm_cMTP7x6mm83qss8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567438357278-48n5ehbff00tuc20ov5femcrptk6nj8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

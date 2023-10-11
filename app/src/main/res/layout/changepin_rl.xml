@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:background="#000"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="@string/logo_image"
+        android:src="@drawable/logo" >
+    </ImageView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#323232"
+        android:gravity="center_horizontal"
+        android:id="@+id/lin_otp"
+        >
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Old Pin"
+            android:id="@+id/txt_point"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Old Pin"
+            android:id="@+id/textView"
+            android:padding="8dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_old_pin"
+            android:ems="15"
+            android:maxLength="4"
+            android:inputType="number"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request OTP"
+            android:id="@+id/btn_otp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#323232"
+        android:gravity="center_horizontal"
+
+        android:id="@+id/lin_updatepass"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Old Pin"
+            android:background="#777"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter OTP Received"
+            android:padding="8dp"
+
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_otp"
+            android:inputType="numberPassword"
+            android:singleLine="true"
+            android:ems="15"
+            android:maxLength="6"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your New Pin"
+            android:padding="8dp"
+
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_newpin"
+            android:inputType="numberPassword"
+            android:singleLine="true"
+            android:ems="15"
+            android:maxLength="4"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ReEnter Your New Pin"
+            android:padding="8dp"
+
+            android:textAppearance="?android:textAppearanceSmall"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtcnewpin"
+            android:inputType="numberPassword"
+            android:singleLine="true"
+            android:ems="15"
+            android:maxLength="4"
+            />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Pin"
+            android:id="@+id/btn_update" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-config:12.0.1@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/225a86fb8623b11803b62e220724a0ef/transformed/jetified-firebase-config-12.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/225a86fb8623b11803b62e220724a0ef/transformed/jetified-firebase-config-12.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

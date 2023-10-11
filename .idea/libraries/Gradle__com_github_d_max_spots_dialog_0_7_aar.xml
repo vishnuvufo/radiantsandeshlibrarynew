@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.d-max:spots-dialog:0.7@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/5b29c079147055edca913a96d11e89cb/transformed/jetified-spots-dialog-0.7/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/5b29c079147055edca913a96d11e89cb/transformed/jetified-spots-dialog-0.7/res" />
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/transforms-3/5b29c079147055edca913a96d11e89cb/transformed/jetified-spots-dialog-0.7/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/modules-2/files-2.1/com.github.d-max/spots-dialog/0.7/c18ce621f6523c461bdc07c3d7b77938c891404b/spots-dialog-0.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../../../../Android Projects/Sandesh Live Project/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/caches/modules-2/files-2.1/com.github.d-max/spots-dialog/0.7/ef4e3860bef9c4cdd850c0a9f2020dd270c63598/spots-dialog-0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

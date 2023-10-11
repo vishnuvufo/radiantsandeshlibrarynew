@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:scrollbars="none"
+    tools:context=".ReceivePayment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/red">
+
+            <TextView
+                style="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="CASH PICKUP"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgQrScanReceivePayment"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/qr_code" />
+
+            <TextView
+                android:id="@+id/tvQRResultReceivePayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12sp"
+                android:gravity="center_vertical"
+                android:text="QR Result"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/Header"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/red"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/req_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/req_amount_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Request Amount"
+                    android:inputType="number"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickup_amount_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pickup_amount_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/pickup_amount"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dep_no_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/dep_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/deposit_slip_no"
+                    android:inputType="text"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pis_date_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pis_date_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890/"
+                    android:hint="@string/pis_date"
+                    android:inputType="datetime"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/pis_no_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/pis_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="@string/pis_no"
+                    android:inputType="textFilter"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hci_no_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/hci_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="@string/hci_no"
+                    android:inputType="textFilter"
+                    android:textColor="@color/white" />
+
+<!--                <TextView-->
+<!--                style="?android:attr/textAppearanceLarge"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_weight="9"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/space"-->
+<!--                android:textColor="#FF0000"-->
+<!--                android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvClearHciNoTxt"-->
+<!--                    style="?android:attr/textAppearanceLarge"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_weight="9"-->
+<!--                    android:background="@drawable/qr_scan"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColor="#FF0000"-->
+<!--                    android:textStyle="bold" />-->
+
+                <ImageView
+                    android:id="@+id/tvClearHciNoTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:src="@drawable/qr_scan"
+                    android:visibility="invisible"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_number_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/number_1"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/number1"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_number_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/number_2"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/number2"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_number_3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/number_3"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/number3"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_number_4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/number_4"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/number4"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_number_5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/number_5"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/number5"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/seal_no_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/seal_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="@string/seal_tag_no"
+                    android:inputType="textFilter"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvClearSealNoTxt"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:background="@drawable/ic_close"
+                    android:backgroundTint="@color/red"
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_Receipt_remarks"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/Receipt_remarks"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/Receipt_remarks"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/ccode_spin"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Spinner-->
+            <!--android:id="@+id/Reason_for_nil_pickup"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/lin_deno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dono_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:minHeight="40dp"
+                    android:text="@string/denomination_amount"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_2000"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/twothousand"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+<!--                // 1000 note-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/deno_1000"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/thousand"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+<!--                // 500 note-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_500"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/five_hund"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+<!--                // 200 note new-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_200"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/twohundard"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+<!--                // 100 note-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_100"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/hund"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_50"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/fifty"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_20"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/twenty"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_10"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/ten"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_5"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/five"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/deno_coins"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/coins"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/diff_amount_txt"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:hint="@string/diff_amount"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/diff_amount_txt_star"
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="9"
+                        android:gravity="center"
+                        android:text="@string/star"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/receipt_status_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:nextFocusDown="@+id/dep_amount_txt"
+                    android:paddingLeft="5dp"
+                    android:text="@string/select"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/receipt_status_spinner_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/childlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/child_remarks_receipt_status_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:nextFocusDown="@+id/dep_amount_txt"
+                    android:paddingLeft="5dp"
+                    android:text="@string/select"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/child_remarks_receipt_status_spinner_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aditional_remarks_layout"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/aditional_remarks_editText"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="top|start"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 "
+                    android:hint="Additional Remarks"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:gravity="center"-->
+            <!--android:id="@+id/lin_dep"-->
+            <!--&gt;-->
+            <!--<TextView-->
+            <!--android:id="@+id/textView2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:gravity="center"-->
+            <!--android:minHeight="40dp"-->
+            <!--android:text="Deposite"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="16sp" />-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:id="@+id/lin_dep11"-->
+            <!--&gt;-->
+
+            <!--<Spinner-->
+            <!--android:id="@+id/dep_type_spin"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/new_lin_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lin_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lin_dep"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:minHeight="40dp"
+                                android:text="Deposit"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lin_dep11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+<!--                            // test suji 21.6.2017-->
+
+                            <Spinner
+                                android:id="@+id/dep_type_spin"
+                                style="@style/receive_payment_edittext_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:textColor="@color/edittext_color" />
+
+                            <TextView
+                                style="?android:attr/textAppearanceLarge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="9"
+                                android:gravity="center"
+                                android:text="@string/star"
+                                android:textColor="#FF0000"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/new_deposite_block"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/bank_name_spin"
+                                    style="@style/receive_payment_edittext_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    style="?android:attr/textAppearanceLarge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="9"
+                                    android:gravity="center"
+                                    android:textColor="#FF0000"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <Spinner
+                                    android:id="@+id/branch_name_spin"
+                                    style="@style/receive_payment_edittext_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/branch_name"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    style="?android:attr/textAppearanceLarge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="9"
+                                    android:gravity="center"
+                                    android:text="@string/space"
+                                    android:textColor="#FF0000"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/accounts_autocomplete"
+                                    style="@style/receive_payment_edittext_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_weight="1"
+                                    android:hint="Account"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    style="?android:attr/textAppearanceLarge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="9"
+                                    android:gravity="center"
+                                    android:textColor="#FF0000"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/branch_name_edt"
+                                    style="@style/receive_payment_edittext_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="Deposit Branch Name"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    style="?android:attr/textAppearanceLarge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="9"
+                                    android:gravity="center"
+                                    android:text="@string/star"
+                                    android:textColor="#FF0000"
+                                    android:textStyle="bold"
+                                    android:visibility="invisible" />
+
+                            </LinearLayout>
+
+<!--                            // test 27.7.17 &#45;&#45; deposit slip-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/bank_dep_slip_txt"
+                                    style="@style/receive_payment_edittext_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/bank_dep_slip"
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    style="?android:attr/textAppearanceLarge"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="9"
+                                    android:gravity="center"
+                                    android:textColor="#FF0000"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_vault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/vault_name_spin"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+<!--            // test 27.7.17 &#45;&#45; deposit amount-->
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/dep_amount_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/deposit_amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/dep_amount_txt_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/time_picker"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/pickup_time"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:editable="false"-->
+            <!--android:hint="@string/pickup_time"-->
+            <!--android:inputType="date"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_Field_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/Field_1"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/field1"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_Field_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/Field_2"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/field2"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_Field_3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/Field_3"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/field3"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/Layout_Field_4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/Field_4"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="@string/field4"-->
+            <!--android:inputType="text"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Spinner-->
+            <!--android:id="@+id/Collection_remarks_spinner"-->
+            <!--style="@style/receive_payment_edittext_style"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/edittext_color" />-->
+
+            <!--<TextView-->
+            <!--style="?android:attr/textAppearanceLarge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="9"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/space"-->
+            <!--android:textColor="#FF0000"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/remarks_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="top|start"
+                    android:hint="@string/remarks"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    android:id="@+id/remarks_txt_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+<!--            // test 27.7.17-->
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_btn_bg"
+                android:minHeight="40dp"
+                android:minWidth="150dp"
+                android:text="@string/submit"
+                android:textColor="@color/submit_btn_clr"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+

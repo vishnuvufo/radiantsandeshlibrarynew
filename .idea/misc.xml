@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/drawable-hdpi/cancel.xml" value="0.2585" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/drawable/border_blue.xml" value="0.207" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/drawable/cancel.xml" value="0.2585" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/activity_crash.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/activity_deposit_amount_edit_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/activity_depost.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/activity_mode_of_transaction.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/changepin_lst.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/changepin_rl.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/changepindlg.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/confirm_dialog_screen.xml" value="0.23854166666666668" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/confirm_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/dialog_entercpin.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/dialog_generatecpin.xml" value="0.23854166666666668" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/dialog_loginotp_verify.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/dialog_mobilenumber_verify.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/receive_payment.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/receivepayment_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/recycler_cheque_confirmation.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/to_popupspinner.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/transaction.xml" value="0.25416666666666665" />
+        <entry key="..\:/LIVE PROJECT/SANDESH/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/translist_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Sandesh New Live/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/activity_cheque_pickup_submit.xml" value="0.11302083333333333" />
+        <entry key="..\:/Sandesh New Live/SANDESH LIVE18-06-2022/Radiant Sandesh QR/Radiant Sandesh QR/app/src/main/res/layout/receive_payment.xml" value="0.20742753623188406" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

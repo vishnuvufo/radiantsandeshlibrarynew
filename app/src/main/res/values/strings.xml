@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Radiant Sandesh</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login_text">LOGIN</string>
+    <string name="pin_no">PIN No</string>
+    <string name="login_button_image">Login Button Image</string>
+    <string name="pin_number">Pin Number</string>
+    <string name="dob">Date of Birth</string>
+    <string name="logo_image">Logo Image</string>
+    <string name="username">UserName</string>
+    <string name="point_name">Point Name</string>
+    <string name="amount">Amount</string>
+    <string name="_1_20_000">1,20,000</string>
+    <string name="demo_amount">1,20,000</string>
+    <string name="ccode">Client Code</string>
+    <string name="list_item_arrow_image">List Item Arrow Image</string>
+    <string name="transaction_list_view_header_image">Transaction List View Header Image</string>
+
+    <string name="exit_string">Do you want to exit?</string>
+    <string name="yes_string">Yes</string>
+    <string name="no_string">No</string>
+    <string name="print_string">Print</string>
+    <string name="print_details_string">Print Details</string>
+
+
+    <color name="colorPrimary">#12B9CB</color>
+    <color name="colorPrimary1">#57b7c1</color>
+    <color name="colorPrimaryDark">#157580</color>
+    <color name="colorAccent">#cc4343</color>
+    <color name="app_bg">#29272a</color>
+    <color name="pinno_textcolor">#5a5a5a</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="submit_btn_clr">#1b4520</color>
+    <color name="submit_btn__normal_bg">#4bd95c</color>
+    <color name="submit_btn__pressed_bg">#3d9248</color>
+    <color name="hint_color">#716e72</color>
+    <color name="edit_text_bg_color">#2d2b2e</color>
+    <color name="white_light">#c5c2c6</color>
+    <color name="text_color">#e2dee4</color>
+    <color name="red">#d94b59</color>
+    <color name="dark_grey">#484547</color>
+    <color name="recycler_bg">#a9767878</color>
+    <color name="edittext_stroke_pressed_clr">#514e52</color>
+    <color name="edittext_stroke_normal_clr">#434144</color>
+    <color name="print_textcolor">#f3cf25</color>
+    <color name="edittext_text_normal_clr">#716e72</color>
+    <color name="edittext_text_focus_clr">#e2dee4</color>
+    <color name="colorPrimaryLite">#31b9f2</color>
+    <color name="colorgrey">#D3D3D3</color>
+    <color name="colorredtwo">#cc0000</color>
+    <color name="colorblueone">#0000A0</color>
+    <color name="colorgreythree">#808080</color>
+    <color name="colorwarning">#ffcc00</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+
+    <string name="close_image_string">Close Image</string>
+    <string name="receipt_status">Receipt Status</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="transactions">Transactions</string>
+    <string name="cancel_receipt">Cancel Receipt</string>
+    <string name="receipt_print">Receipt Print</string>
+    <string name="eod_receipt">EOD Receipt</string>
+    <string name="pickup_amount">Pickup Amount</string>
+    <string name="pickup_time">Pickup Time</string>
+    <string name="deposit_slip_no">Deposit Slip No</string>
+    <string name="pis_no">PIS No</string>
+    <string name="hci_no">HCI No</string>
+    <string name="pis_date">Pis Date (DD/MM/YYYY)</string>
+    <!--Seal Tag No is changed to Receipt No-->
+    <string name="seal_tag_no">Receipt No</string>
+    <string name="deposit_amount">Deposit Amount</string>
+    <string name="diff_amount">Difference Amount</string>
+    <string name="remarks">Remarks</string>
+    <!-- <string name="webservice_url">http://119.82.114.75/RCMS/mfservices_test_2000.php</string> -->
+    <!--<string name="webservice_url">http://210.18.134.54/RCMS/mfservices_test_2000.php</string>-->
+    <string name="webservice_url">http://sandeshone.scanslips.in/RCMS/mfservices_test_2000.php</string>
+    <!--<string name="webservice_url">http://125.99.157.10/RCMS/mfservices_test_2000_new_qr.php</string>-->
+    <!-- <string name="webservice_url">http://192.168.5.100/sandbox/RCMS/mfservices_test_2000.php</string> -->
+    <string name="build_version">"Build Version: v 12.0.21"</string>
+    //23-03-2023// 24-10-2020 //10-2-2 //19-2-22 //20-2-22 //21-2-22 //15-3-22//
+    12.0.15-=12-08-2022////13.0.12 ////LAST CHANGE V12.0.17 - 26-08-2022///
+    <string name="demo_pin">637895</string>
+    // also change the Version number in Config.java, build.gradle files......................
+
+    <color name="transparent_color">#00000000</color>
+
+    <string name="please_select_the_printer_device">Select device</string>
+    <string name="device_name">Device Name</string>
+    <string name="device_address">Device Address</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="receive_payment">RECEIVE PAYMENT</string>
+    <string name="printer_status">Printer Status</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="printer_type">Printer Type</string>
+    <string name="receivepayment_dialog_header">Enter this Transaction CPIN</string>
+    <string name="receivepayment_dialog_hint">Enter this Transaction CPIN</string>
+    <string name="empty"></string>
+    <string name="star">*</string>
+    <string name="space">" "</string>
+    <string name="app_logo">App Logo</string>
+    <string name="select">Select</string>
+    <string name="denomination_amount">Denomination Amount</string>
+    <string name="twothousand">2000</string>
+    <string name="twohundard">200</string>
+    <string name="thousand">1000</string>
+    <string name="five_hund">500</string>
+    <string name="hund">100</string>
+    <string name="fifty">50</string>
+    <string name="twenty">20</string>
+    <string name="ten">10</string>
+    <string name="coins">Coins</string>
+    <string name="five">5</string>
+
+    <string name="title_activity_multi_receive_payment">MultiReceivePayment</string>
+    <string name="title_activity_locate__me">Locate_Me</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="acc_no">Account Number</string>
+    <string name="bank_dep_slip">Bank Deposit Slip No.</string>
+    <string name="title_activity_edit_receipt">EditReceipt</string>
+    <string name="title_activity_edit_payment">EditPayment</string>
+    <string name="number1">Number 1</string>
+    <string name="number2">Number 2</string>
+    <string name="number3">Number 3</string>
+    <string name="number4">Number 4</string>
+    <string name="number5">Number 5</string>
+
+    <string name="field1">Number 1</string>
+    <string name="field2">Number 2</string>
+    <string name="field3">Number 3</string>
+    <string name="field4">Number 4</string>
+
+    <string name="Receipt_remarks">Receipt Remarks</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_network_connection">No Network Connection</string>
+    <string name="request_failed">Request Failed</string>
+    <string name="delivery_amount">Delivery Amount</string>
+    <string name="receipt_no">Receipt No</string>
+    <string name="cheque_amount">Cheque Amount</string>
+    <string name="pickup_diff_amount">Pickup Difference Amount</string>
+    <string name="text_enter_otp">OTP</string>
+    <string name="text_enter_your_cpin">Enter your OTP</string>
+    <string name="text_submit">Submit</string>
+    <string name="text_resend_otp">Resend OTP?</string>
+    <string name="text_generate_cpin">Generate OTP</string>
+    <string name="text_wanttogeneratecpin">Want to generate OTP?</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_deposit_entry">Deposit Entry</string>
+    <string name="text_single_transaction">Single Transaction Entry</string>
+    <string name="text_multiple_transaction">Multiple Transaction Entry</string>
+    <string name="text_total_amount">Total Amount : Rs 1,00000</string>
+    <string name="text_pickup_amount">Pickup amount</string>
+    <string name="text_deposit_amount">Deposit amount</string>
+    <string name="text_enter_deposit_amount">Enter Deposit amount </string>
+    <string name="text_difference_amount">Difference amount</string>
+    <string name="text_difference_amount_cih">Difference amount - CIH</string>
+    <string name="text_account_number">Bank Account Number</string>
+    <string name="text_bank_name">Bank Name</string>
+    <string name="text_enter_bank_name">Enter Bank Name</string>
+    <string name="text_deposit_branch_name">Deposit Branch Name</string>
+    <string name="text_enter_deposit_branch_name">Enter Deposit Branch Name</string>
+    <string name="text_enter_account_number">Enter Bank Account Number</string>
+    <string name="text_remarks">Remarks</string>
+    <string name="text_enter_remarks">Enter Remarks</string>
+    <string name="text_slip_number">Deposit Slip Number</string>
+    <string name="text_enter_slip_number">Enter Deposit Slip Number</string>
+    <string name="pickup">Pickup</string>
+
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="crop_image_activity_no_permissions">Cancelling, required permissions are not granted</string>
+
+
+    <string name="text_2000">2000</string>
+    <string name="text_500">500</string>
+    <string name="text_200">200</string>
+    <string name="text_100">100</string>
+    <string name="text_50">50</string>
+    <string name="text_20">20</string>
+    <string name="text_10">10</string>
+    <string name="text_5">5</string>
+    <string name="text_coins">Coins</string>
+
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <item name="materialThemeOverlay">
+            @style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox
+        </item>
+        <item name="boxCollapsedPaddingTop">0dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"></style>
+</resources>

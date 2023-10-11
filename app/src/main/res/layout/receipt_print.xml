@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d9c961" >
+
+        <TextView
+            style="@style/list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/print_btn_img"
+            android:text="@string/receipt_print" />
+
+        <ImageView
+            android:id="@+id/printerType"
+            style="@style/list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/connectPrinter"
+            android:src="@drawable/btn_printer_3mm"
+            android:contentDescription="@string/printer_type" />
+
+        <ImageView
+            android:id="@+id/connectPrinter"
+            style="@style/list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/printer_status"
+            android:src="@drawable/printer_off" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/trans_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:padding="10dp"
+        android:scrollbars="none"
+        tools:listitem="@layout/translist_item" >
+    </ListView>
+
+</LinearLayout>

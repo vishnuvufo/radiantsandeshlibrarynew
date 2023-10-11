@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_all_cornered_white_bg_design"
+    android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_top_cornered_color_primary_bg_design">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:id="@+id/tvAlertHeading"
+                android:text="Alert!"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/close_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:tint="@color/red"
+                    android:src="@drawable/ic_close" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pop_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you sure do you want to submit !"
+                android:textColor="@color/submit_btn__pressed_bg"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tvDatePopUp"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="@color/app_bg"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time"
+                    android:id="@+id/tvTimePopUp"
+                    android:gravity="end"
+                    android:textColor="@color/app_bg"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvReqAmtPopUp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Request Amount : "
+                android:textColor="@color/app_bg"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDelAmtPopUp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Amount : "
+                android:textColor="@color/app_bg"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tvDiffAmtPopUp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difference Amount : "
+                android:textColor="@color/app_bg"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tvDelToPopUp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery To : "
+                android:textColor="@color/app_bg"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tvRecptNoPopUp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receipt No : "
+                android:textColor="@color/app_bg"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tvRemarkTypePopUp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remark Type : "
+                android:textColor="@color/app_bg"
+                android:textSize="15sp"
+                />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/yes"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/custom_all_cornered_white_bg_design"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="Yes"
+            android:textColor="@color/app_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_all_cornered_white_bg_design"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
+            android:text="No"
+            android:textColor="@color/app_bg"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--android:text="@string/online"-->

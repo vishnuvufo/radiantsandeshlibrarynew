@@ -1,0 +1,88 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+
+    -->
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="AlertTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Used for the buttons -->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!-- Used for the title and text -->
+        <!--<item name="android:textColorPrimary">#FFFFFF</item>-->
+        <!-- Used for the background -->
+    </style>
+    <style name="AppBaseTheme" parent="android:style/Theme.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+
+
+    <style name="list_header" parent="android:Widget.TextView">
+        <item name="android:clickable">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">10dip</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="receive_payment_edittext_style">
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="receive_payment_edittext_style_spinner">
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+
+
+    <style name="Animations" />
+
+    <style name="Animations.GrowFromTop">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+</resources>

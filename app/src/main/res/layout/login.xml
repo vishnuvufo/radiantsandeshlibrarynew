@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="30dip"
+    android:paddingRight="30dip" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dip"
+        android:contentDescription="@string/logo_image"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top"
+        android:gravity="center"
+        android:text="@string/login_text"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="12dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@drawable/user"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dip"
+            android:text="@string/pin_no"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!--android:text="@string/empty"-->
+        <EditText
+            android:id="@+id/pinno_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/txt_box"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:maxLength="6"
+            android:hint="@string/pin_number"
+            android:inputType="numberPassword"
+            android:text="@string/empty"
+            android:textColor="@color/pinno_textcolor"
+            android:textSize="14sp" >
+        </EditText>
+
+        <EditText
+            android:visibility="visible"
+            android:editable="false"
+            android:id="@+id/dob_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="5dip"
+            android:background="@drawable/txt_box"
+            android:clickable="true"
+            android:drawableStart="@drawable/dob"
+            android:drawableLeft="@drawable/dob"
+            android:drawablePadding="5dip"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="@string/dob"
+            android:inputType="date"
+            android:text="@string/empty"
+            android:textColor="@color/pinno_textcolor"
+            android:textSize="14sp">
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:contentDescription="@string/login_button_image"
+            android:src="@drawable/login_btn" />
+    </LinearLayout>
+
+</LinearLayout>

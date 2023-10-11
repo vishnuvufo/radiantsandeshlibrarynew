@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#48E9EAF4"
+    tools:context=".Delhivery_Pay.Delivery_EntryCash">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ln_deposit_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/postDetailsTopLayout"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorblueone"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_7sdp"
+                android:id="@+id/entry_back"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Delhivery"
+                android:fontFamily="sans-serif" />
+
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:src="@drawable/qr_scan"
+                android:tint="@color/white" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_above="@+id/ln_submit"
+        android:id="@+id/scrollable"
+        android:isScrollContainer="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Center Manager Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+
+                        android:editable="false"
+                        android:focusable="false"
+
+                        android:id="@+id/ed_managername"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:hint="Enter Manager Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+
+
+
+
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Center Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+
+                        android:editable="false"
+                        android:focusable="false"
+                        android:id="@+id/ed_centername"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:hint="Enter Center Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Phone number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+                        android:editable="false"
+                        android:focusable="false"
+
+                        android:id="@+id/ed_phone_number"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:hint="Enter Phone number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Email address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+                        android:editable="false"
+                        android:focusable="false"
+                        android:id="@+id/ed_emailaddress"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:hint="Enter Email address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Center Coder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+
+
+                        android:editable="false"
+                        android:focusable="false"
+
+                        android:id="@+id/ed_centercode"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:hint="Enter Center Code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Deposit ID "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/ed_depositId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:backgroundTint="@color/white"
+
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Enter Deposit ID"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:minHeight="48dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="Autofill"
+                        tools:targetApi="lollipop" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+                        android:editable="false"
+                        android:focusable="false"
+
+
+                        android:id="@+id/ed_totalAmount"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:hint="Enter Total Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Total Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+                    <EditText
+                        android:id="@+id/ed_depositAmount"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:textSize="16sp"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:hint="Enter Total Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:targetApi="lollipop"
+                        tools:ignore="Autofill" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_denomination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="Denomination Amount"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_2000"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_n2000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_2000"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:digits="1234567890"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                     />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_500"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_500"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:digits="1234567890"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_200"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_200"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_100"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_100"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_50"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_50"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_20"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_20"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_10"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_10"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_5"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_5"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="2"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_coins"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_coins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:maxLength="10"
+                    android:digits="1234567890"                    android:editable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_coins"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/sansationregular"
+                android:gravity="start"
+                android:text="@string/text_difference_amount"
+                android:textColor="@color/colorblueone"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/border_grey_square"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/ed_difference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginLeft="10sp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:cursorVisible="false"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                    android:editable="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/sansationbold"
+                    android:hint="@string/text_difference_amount"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill"
+                    tools:targetApi="lollipop" />
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16sp"
+                        android:gravity="start"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorblueone"
+                        android:text="Agent Mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:background="@drawable/border_grey_square"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    tools:ignore="UselessParent">
+
+                    <EditText
+                        android:id="@+id/ed_agentMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:backgroundTint="@color/white"
+                        android:hint="Enter Agent Mobile"
+                        android:imeOptions="actionNext"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:maxLength="10"
+                        tools:ignore="Autofill"
+                        tools:targetApi="lollipop" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/submit_entry"
+                android:background="@drawable/border_blue"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/text_submit"
+                    android:textAllCaps="false"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

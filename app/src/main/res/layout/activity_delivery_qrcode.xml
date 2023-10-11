@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#48E9EAF4"
+    tools:context=".Delhivery_Pay.Delivery_EntryCash">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ln_deposit_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/postDetailsTopLayout"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorblueone"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_9sdp"
+                android:id="@+id/entry_back"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Delhivery"
+                android:fontFamily="@font/montserratsemibold" />
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:layout_marginEnd="@dimen/_9sdp"
+                android:layout_marginBottom="@dimen/_9sdp"
+                android:src="@drawable/qr_scan"
+                android:tint="@color/white" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_above="@+id/ln_submit"
+        android:id="@+id/scrollable"
+        android:isScrollContainer="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ln_submit"
+                android:background="@drawable/border_blue"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/text_submit"
+                    android:textAllCaps="false"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Radiant_Sandesh_QR.iml" filepath="$PROJECT_DIR$/.idea/modules/Radiant_Sandesh_QR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Radiant_Sandesh_QR.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.iml" filepath="$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/sandeshAppSdk/Radiant_Sandesh_QR.sandeshAppSdk.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:scrollbars="none"
+    tools:context=".EditPayment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/receive_payment"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Header"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/req_lin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Request Ampunt"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    />
+                <EditText
+                    android:id="@+id/req_amount_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".55"
+                    android:hint="Request Amount"
+                    android:inputType="number"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/pickup_amount_lin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pickup_amount"
+                    android:layout_weight="1"
+                    android:id="@+id/txt_1"
+                    android:textSize="12sp"
+                    />
+                <EditText
+                    android:id="@+id/pickup_amount_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".55"
+                    android:hint="@string/pickup_amount"
+                    android:inputType="number"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/dep_no_lin"
+                >
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deposit_slip_no"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:id="@+id/txt_2"
+                />
+                <EditText
+                    android:id="@+id/dep_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".55"
+                    android:hint="Dep. Slip No"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:inputType="textFilter"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/pis_no_lin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pis_no"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:id="@+id/txt_3"
+                    />
+                <EditText
+                    android:id="@+id/pis_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".55"
+                    android:hint="@string/pis_no"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:inputType="textFilter"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/hci_no_lin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hci_no"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:id="@+id/txt_4"
+                    />
+                <EditText
+                    android:id="@+id/hci_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:inputType="textFilter"
+                    android:layout_weight=".55"
+                    android:hint="@string/hci_no"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/rec_no_lin"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seal_tag_no"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:id="@+id/txt_5"
+                    />
+                <EditText
+                    android:id="@+id/rec_no_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".55"
+                    android:hint="@string/seal_tag_no"
+                    android:inputType="text"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Client/Point Code"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    />
+                <EditText
+                    android:id="@+id/edt_spin"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".47"
+                    android:enabled="false"
+                    android:hint="Client Code - Point Code"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/lin_deno"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/dono_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:minHeight="40dp"
+                    android:text="@string/denomination_amount"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2000"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_2000"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="2000"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1000"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_1000"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/thousand"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="500"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_500"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/five_hund"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="200"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_200"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="200"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_100"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/hund"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_50"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/fifty"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_20"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/twenty"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_10"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/ten"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_5"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/five"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Coins"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        />
+                    <EditText
+                        android:id="@+id/deno_coins"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/coins"
+                        android:inputType="number"
+                        android:textColor="@color/edittext_color" />
+
+                    <TextView
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/space"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    ><TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Difference Amt."
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    />
+
+                    <EditText
+                        android:id="@+id/diff_amount_txt"
+                        style="@style/receive_payment_edittext_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".55"
+                        android:hint="@string/diff_amount"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"
+                        android:textColor="#fff" />
+
+                    <TextView
+                        android:id="@+id/diff_amount_txt_star"
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:text="@string/star"
+                        android:textColor="#FF0000"
+                        android:visibility="invisible"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/lin_dep"
+                >
+
+                <Spinner
+                    android:id="@+id/dep_type_spin"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/lin_bank"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <Spinner
+                            android:id="@+id/bank_name_spin"
+                            style="@style/receive_payment_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/edittext_color" />
+
+                        <TextView
+                            style="?android:attr/textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="9"
+                            android:gravity="center"
+                            android:text="@string/space"
+                            android:textColor="#FF0000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Acc No:"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            />
+                        <Spinner
+                            android:id="@+id/branch_name_spin"
+                            style="@style/receive_payment_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".55"
+                            android:textColor="@color/edittext_color"
+                            android:hint="@string/branch_name"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            />
+
+                        <TextView
+                            style="?android:attr/textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.4"
+                            android:gravity="center"
+                            android:text="@string/space"
+                            android:textColor="#FF0000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deposit Branch "
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            />
+                        <EditText
+                            android:id="@+id/branch_name_edt"
+                            style="@style/receive_payment_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".55"
+                            android:textColor="@color/edittext_color"
+                            android:hint="Deposit Branch Name"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            />
+
+                        <TextView
+                            style="?android:attr/textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.4"
+                            android:gravity="center"
+                            android:text="@string/space"
+                            android:textColor="#FF0000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bank Dep. Slip No."
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            />
+                        <EditText
+                            android:id="@+id/bank_dep_slip_txt"
+                            style="@style/receive_payment_edittext_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".55"
+                            android:textColor="@color/edittext_color"
+                            android:hint="@string/bank_dep_slip"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            />
+
+                        <TextView
+                            style="?android:attr/textAppearanceLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1.4"
+                            android:gravity="center"
+                            android:text="@string/space"
+                            android:textColor="#FF0000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/lin_vault"
+                android:visibility="gone"
+                >
+
+                <Spinner
+                    android:id="@+id/vault_name_spin"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/space"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deposit_amount"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    />
+                <EditText
+                    android:id="@+id/dep_amount_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".55"
+                    android:hint="@string/deposit_amount"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    android:id="@+id/dep_amount_txt_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.4"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/receipt_status_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:minHeight="40dp"
+                    android:nextFocusDown="@+id/dep_amount_txt"
+                    android:paddingLeft="5dp"
+                    android:text="@string/select"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    android:id="@+id/receipt_status_spinner_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="@string/star"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/remarks_txt"
+                    style="@style/receive_payment_edittext_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:gravity="top|start"
+                    android:hint="@string/remarks"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@color/edittext_color" />
+
+                <TextView
+                    android:id="@+id/remarks_txt_star"
+                    style="?android:attr/textAppearanceLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_btn_bg"
+                android:minHeight="40dp"
+                android:minWidth="150dp"
+                android:text="@string/submit"
+                android:textColor="@color/submit_btn_clr"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/red"
+                android:minHeight="40dp"
+                android:minWidth="150dp"
+                android:text="@string/delete"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/dropDownItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:singleLine="true"
+    android:gravity="center"
+    android:ellipsize="marquee"
+    android:background="@color/app_bg"
+    android:textColor="@color/text_color"
+    android:text="-Select-" />
+
+<!--
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@android:id/text1"
+style="?android:attr/dropDownItemStyle"
+android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+android:singleLine="true"
+android:layout_width="match_parent"
+android:layout_height="?android:attr/listPreferredItemHeight"
+android:ellipsize="marquee" />-->
+
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@android:id/text1"
+style="?android:attr/spinnerItemStyle"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/app_bg"
+android:ellipsize="marquee"
+android:padding="10dp"
+android:singleLine="true"
+android:textAlignment="inherit"
+android:textColor="@color/white" />-->
